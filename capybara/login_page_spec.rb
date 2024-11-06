@@ -10,20 +10,6 @@ RSpec.describe 'Login Tests' do
     @driver = Capybara::Session.new(:selenium)
   end
   
-=begin
-  context "Login with username and password" do
-    usernames = ['standard_user']
-    password = 'secret_sauce'
-    usernames.each do |username|
-      it "should be able to login with the username and password" do
-        @driver.fill_in 'user-name', visible: true, with: username
-        @driver.fill_in 'password', visible: true, with: password
-        @driver.click_button('Login')      
-      end
-    end  
-  end
-=end
-  
   context "Login to account and add item to cart" do      
     user_field = 'user-name'
     password_field = 'password'
